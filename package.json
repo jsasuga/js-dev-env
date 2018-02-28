@@ -2,7 +2,14 @@
   "name": "js-dev-env",
   "version": "1.0.0",
   "description": "JavaScript development environment",
-  "scripts": {},
+  "scripts": {
+      "prestart": "node build-scripts/start-message.js && nsp check",
+      "start": "npm-run-all --parallel security-check open:src",
+      "open:src": "node build-scripts/src-server.js",
+      "security-check": "nsp check",
+      "localtunnel": "lt --port 3000 --subdomain jsasuga",
+      "share": "npm-run-all --parallel open:src localtunnel"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jsasuga/js-dev-env.git"
