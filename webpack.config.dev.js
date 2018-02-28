@@ -23,8 +23,5 @@ export default {
                 loaders: ["style-loader", "css-loader"]
             }
         ]
-    },
-    devServer: {
-        noInfo: true
     }
 };
