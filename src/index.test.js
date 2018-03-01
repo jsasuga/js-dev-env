@@ -4,7 +4,7 @@ import { fs } from "fs";
 
 describe("First test", () => {
     it("should pass", () => {
-        expect(true).to.eq(false);
+        expect(true).to.eq(true);
     });
 });
 
